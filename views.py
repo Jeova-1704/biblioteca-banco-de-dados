@@ -46,14 +46,14 @@ with connection:
     query = "UPDATE livros SET titulo=? where id =?"
     cur.execute(query, valores)
 '''
-
+'''
 # deletando valores do banco de dados
 valores = [ 1 ]
 with connection:
     cur = connection.cursor()
     query = "DELETE FROM livros WHERE id=?"
     cur.execute(query, valores)
-
+'''
 
 cur = connection.cursor()
 cur.execute("SELECT * FROM livros")
